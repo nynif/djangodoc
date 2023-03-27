@@ -45,5 +45,27 @@ python manage.py migrate
 python manage.py makemigrations
 
 ### Configuration d'apache 
+La configuration d'apache se fait dans le dossier /etc/apache2/sites-available/
+cd /etc/apache2/sites-available/
 
+Dans le dossier sites-available de ce repo on trouve 3 configurations en exemple
+projet.conf, configuration pour le site http
+projet-ssl.conf, configuration pour le site https
+projet-redirect.conf, redirection du http vers https
+
+projet.conf et projet-redirect.conf ne peuvent pas être utilisé en même temps. projet.conf est donné pour l'exemple mais enfaite il ne sera pas utilisé à terme car on souhaite avoir notre site en https tout le temps.
+
+cmd
+a2ensite  
+a2dissite
+systemctl restart apache2
+systemctl status apache2
+a2enmod ssl
+a2dismod ssl
+apache2ctl -S
+
+Afficher les sites actifs 
+a2query -s
+
+Afficher les sites dispo
  
