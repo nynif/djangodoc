@@ -13,3 +13,12 @@ DEBUG = os.environ.get('DEBUG', True)
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-...')
 ALLOWED_HOSTS = [[adresse_ip_ssh], [nom_de_domaine]]
 
+
+## Choisir et configurer son hebergeur
+Choisir un hebergement permettant d'avoir un accès ssh et des accès root.
+Dans l'exemple si dessous on utilise hostinger.com
+
+Sur hostinger.com
+- Souscrire à un plan VPS (le plan hébérgement ne donne pas l'accès root)
+- Créer un mot de passe root puis noter l'adresse IP de notre serveur [adresse_ip_ssh]
+- Pour plus de sécurité ajouter une clé SSH 
