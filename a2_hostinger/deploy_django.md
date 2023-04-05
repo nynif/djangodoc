@@ -22,3 +22,17 @@ Sur hostinger.com
 - Souscrire à un plan VPS (le plan hébérgement ne donne pas l'accès root)
 - Créer un mot de passe root puis noter l'adresse IP de notre serveur [adresse_ip_ssh]
 - Pour plus de sécurité ajouter une clé SSH 
+
+## Configurer son serveur 
+### Accès ssh
+
+### Environnement
+
+### Récuperer notre projet
+
+### Builder le project django 
+
+
+### Configuration d'apache 
+
+ 
