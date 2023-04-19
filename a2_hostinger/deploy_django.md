@@ -25,8 +25,12 @@ Sur hostinger.com
 
 ## Configurer son serveur 
 ### Accès ssh
+ssh root@[adresse_ip_ssh]
 
 ### Environnement
+sudo apt-get install git python3-pip apache2 libapache2-mod-wsgi-py3 python3.10-venv
+
+Par default apache2 rend public le fichier /var/www/html/index.html, on peut tester sur un navigateur [adresse_ip_ssh] et voir l'affichage de la page par default
 
 ### Récuperer notre projet
 
