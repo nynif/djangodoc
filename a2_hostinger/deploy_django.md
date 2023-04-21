@@ -33,9 +33,16 @@ sudo apt-get install git python3-pip apache2 libapache2-mod-wsgi-py3 python3.10-
 Par default apache2 rend public le fichier /var/www/html/index.html, on peut tester sur un navigateur [adresse_ip_ssh] et voir l'affichage de la page par default
 
 ### Récuperer notre projet
+cd /var/www/
+git clone [https://github.com/monprojet.git]
 
 ### Builder le project django 
-
+python -m venv .env
+source .env/bin/activate
+pip install -r requirements.txt
+python manage.py collectstatic
+python manage.py migrate
+python manage.py makemigrations
 
 ### Configuration d'apache 
 
