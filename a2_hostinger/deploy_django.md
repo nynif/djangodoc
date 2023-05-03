@@ -68,4 +68,13 @@ Afficher les sites actifs
 a2query -s
 
 Afficher les sites dispo
+
+#### pour un site en http
+a2dismod ssl
+a2ensite projet.conf
+systemctl restart apache2
+
+- http://[adresse_ip_ssh] donne accès au site
+- https://[adresse_ip_ssh] ne renvoi rien 
+
  
