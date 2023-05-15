@@ -77,4 +77,13 @@ systemctl restart apache2
 - http://[adresse_ip_ssh] donne accès au site
 - https://[adresse_ip_ssh] ne renvoi rien 
 
- 
+ #### pour un site en https seulement 
+
+a2enmod ssl
+a2dissite projet.conf
+a2ensite projet-ssl.conf
+a2ensite projet-redirect.conf
+systemctl restart apache2
+
+- http://[adresse_ip_ssh] redirige sur https://
+- https://[adresse_ip_ssh] ne renvoi rien 
