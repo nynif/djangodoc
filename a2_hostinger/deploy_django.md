@@ -87,3 +87,9 @@ systemctl restart apache2
 
 - http://[adresse_ip_ssh] redirige sur https://
 - https://[adresse_ip_ssh] ne renvoi rien 
+
+#### Autre config
+Si on a besoin qu'une ressource soit disponible sur une url précise on utilise un ALIAS:
+
+Par exemple pour rendre accessible de fichier robot.txt sur [nom_de_domaine]/robot.txt on ajoutera au .conf
+Alias /robot.txt /var/www/[mon_projet]/robot.txt
