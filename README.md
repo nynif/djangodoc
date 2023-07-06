@@ -2,10 +2,10 @@
 Cette section contient des documentations pour déployer des projets Django avec différentes configurations.
 
 ## TERMINÉ
-- [Créer bdd postgresql sous linux] (https://github.com/nynif/djangodoc/blob/master/postgresql_linux/postgresql.md)
+- [Créer bdd postgresql sous linux](https://github.com/nynif/djangodoc/blob/master/postgresql_linux/postgresql.md)
 
 ## EN COURS
-- [Déploiement de Django sur un serveur Ubuntu avec Apache2 (HTTP et HTTPS/SSL)] (https://github.com/nynif/djangodoc/blob/master/a2_hostinger/deploy_django.md)
+- [Déploiement de Django sur un serveur Ubuntu avec Apache2 (HTTP et HTTPS/SSL)](https://github.com/nynif/djangodoc/blob/master/a2_hostinger/deploy_django.md)
 
 ## À FAIRE
 - Déployer Django sur un serveur Ubuntu à l'aide d'une image Docker 
