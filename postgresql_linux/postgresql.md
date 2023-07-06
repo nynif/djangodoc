@@ -6,28 +6,47 @@ sudo apt-get install postgresql
 ```
 
 ## Ouvrir l'invit de commande postgresql
+
+#### *Se connecter en tant que postgres*
 ```
-sudo -i -u postgres # Se connecter en tant que postgres
-createdb mydb       # Créer une database
-psql                # Rentrer dans postgreSQL
-psql mydb           # Rentrer dans la database mydb
-\dt                 # Lister les tables
-\h                  # help
-SELECT * FROM TABLE # Commande SQL possible 
+sudo -i -u postgres 
+```
+  
+  
+#### *Créer une database*
+```
+createdb mydb
+```
+#### *Rentrer dans postgreSQL*
+```
+psql
+```
+#### *Rentrer dans la database mydb*
+```
+psql mydb
+```
+#### *Commande psql*
+```
+\h                      # help
+\dt                     # Lister les tables
+SELECT * FROM TABLE     # Commande SQL  
+```
+
 
 # Créer un utilisateur
+```
 CREATE USER user_name WITH PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE mydb TO user_name
 ```
 
-A partir de la notre base de donnée mydb existe, par default elle n'est accessible qu'en local. On peut tester avec 
+A partir de la notre base de donnée `mydb` existe, par default elle n'est accessible qu'en local. On peut tester avec 
 ```
 psql -h localhost -U user_name -d mydb
 ```
 
 Si besoin 
 ```
-sudo lsof -i -P -n | grep LISTEN    # Connaitre les ports ouverts
+sudo lsof -i -P -n | grep LISTEN
 systemctl status postgresql
 systemctl stop postgresql
 systemctl start postgresql
@@ -61,7 +80,7 @@ sudo nano /etc/postgresql/14/main/pg_hba.conf
 ```
 host    all             all             IP_CLIENT/32         md5
 ```
-Remplacez IP_CLIENT par l'adresse IP de votre client. Cette ligne permet à toute connexion provenant de cette adresse IP d'accéder à toutes les bases de données et à tous les utilisateurs si le mot de passe est correct.
+Remplacez `IP_CLIENT` par l'adresse IP de votre client. Cette ligne permet à toute connexion provenant de cette adresse IP d'accéder à toutes les bases de données et à tous les utilisateurs si le mot de passe est correct.
 
 3/ **Redémarrer PostgreSQL** :  
 Après avoir effectué ces modifications, vous devez redémarrer le service PostgreSQL pour que les modifications prennent effet :
