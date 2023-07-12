@@ -63,7 +63,7 @@ Dans le dossier `sites-available` de ce repo on trouve des configurations en exe
 - projet-redirect.conf, configuration pour une redirection du http vers https
 - alias.conf, configuration pour donner accès direct à une ressource (exemple robot.txt) 
 - site-index.conf, configuration pour un site simple index.html
-- TODO, configuration pour un serveur flask
+- flask.conf, configuration pour un serveur flask
 
 **SI L'ON VEUT METTRE PLUSIEURS SITE SUR UN MÊME SERVEUR**
 - Utiliser plusieurs fichier conf
